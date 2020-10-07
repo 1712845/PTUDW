@@ -1,0 +1,81 @@
+*{
+  margin:0;
+  padding:0;
+}
+body {
+  padding: 0 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('../images/bg.jpg');
+  height: 100%; 
+}
+a {
+  color: #00B7FF;
+} 
+
+h1{
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+form{
+  margin: 0 auto;
+}
+
+.btn-info{
+  width: 100%;
+}
+
+.block-info{
+  background-color: black;
+}
+
+.breif{
+  margin: 0 auto;
+  border: solid 1px #111111;
+  color: white;
+  background-color: #111111;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+.city{
+  margin: 0 auto;
+  border: solid 1px none;
+  color: white;
+  background-color: #ada816;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.info{
+  width: 100%;
+  border: solid 1px rgb(241, 241, 241);
+  margin-top:50px;
+  background-color: rgb(241, 241, 241,0.25);
+  border-radius: 20px;
+}
+
+.info .layout{
+  border: solid 1px none;
+  margin: 50px 150px;
+  background-color: rgb(220 118 184 / 82%);;
+  border-radius: 20px;
+  height: 500px;
+}
+img{
+  height: 60%;
+}
+.col-3{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.temp{
+  font-size: 150px;
+}
+.title{
+  color: rgb(239 221 7);
+}

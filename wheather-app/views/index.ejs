@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather app</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="container">
+      <div class="row">
+        <h1 class = "title">Welcome to Weather App</h1>
+      </div>
+      <div class = "row">
+        <form action="/" method ="POST">
+          <div class="form-group">
+            <input class="form-control" type="text" name = "city">
+          </div>
+
+          <div class="form-group">
+              <input class="btn btn-info" type ="submit" name="get-wheather" value = "Get weather">
+          </div>
+        </form>   
+      </div>
+      <div class="row">
+        <% if(city){ %>
+        <div class = "city">
+          <h5><%= city%>  <%= time%>  </h5>
+        </div>
+        <%}%>
+      </div>
+      <div class="row">
+        <% if(weather){ %>
+        <div class = "breif">
+          <h5><%= weather %></h5>
+        </div>
+        <%}%>
+      </div>
+    </div>
+    <!-- Header -->
+    <div class = "info">
+      <div class = "layout">
+        <div class="container-fluid">
+          <div class="row">
+            <% if(currTemp){ %>
+            <div class="col-3">
+            <h1 class ="temp"><%= currTemp %>C</h1>
+            <h3>(<%= tempLow %> - <%= tempHigh %>)</h3>
+            </div>
+            <%}%>
+            <% if(code){ %>
+            <div class="col-3">
+              <% if(code >= 200 && code <= 232) { %>
+                <img src="/images/1.png">
+              <% } %>
+
+              <% if(code >= 300 && code <= 321) { %>
+                <img src="/images/2.png">
+              <% } %>
+
+              <% if(code >= 500 && code <= 531) { %>
+                <img src="/images/4.png">
+              <% } %>
+
+              <% if(code >= 600 && code <= 622) { %>
+                <img src="/images/3.png">
+              <% } %>
+
+              <% if(code >= 701 && code <= 781) { %>
+                <img src="/images/4.png">
+              <% } %>
+
+              <% if(code == 800) { %>
+                <img src="/images/5.png">
+              <% } %>
+
+              <% if(code >= 801 && code <= 804) { %>
+                <img src="/images/5.png">
+              <% } %>
+
+              <% if(code >= 900 && code <= 906) { %>
+                <img src="/images/4.png">
+              <% } %>
+            </div>
+            <%}%>
+            <div class="col-3">
+              <% if(currPressure) { %>
+              <h1><%= currPressure %> hPa</h1>
+              <% } %>
+
+              <% if(currHumid) { %>
+              <h1><%= currHumid %> %</h1>
+              <% } %>
+
+              <% if(currWind) { %>
+              <h1><%= currWind %> mph <%= windShort %></h1>
+              <% } %>
+            </div>
+            <div class="col-3">
+              <% if(currCloud) { %>
+              <h1><%= currCloud %> % </h1>
+              <% } %>
+
+              <% if(currDegree) { %>
+              <h1><%= currDegree %></h1>
+              <% } %>
+
+              <% if(visibility) { %>
+              <h1><%= visibility %></h1>
+              <% } %>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
